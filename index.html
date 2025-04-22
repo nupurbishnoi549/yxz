@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buddy's Special Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f2f4ff;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 60px;
+            background-color: #1E71FF;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: 600;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        section {
+            padding: 100px 20px 50px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .bg-light {
+            background-color: #ffffff;
+        }
+
+        .bg-pink {
+            background-color: #ffe3f0;
+        }
+
+        .bg-purple {
+            background-color: #b39ddb;
+        }
+
+        .bg-yellow-light {
+            background-color: #fff9c4;
+        }
+
+        .bg-sky {
+            background-color: #b3e5fc;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .photo-gallery,
+        .cutie-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .photo-card {
+            width: 200px;
+            height: 250px;
+            /* Fixed height for uniformity */
+            object-fit: cover;
+            /* Ensures image fills the box nicely */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .message-cards,
+        .ira-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .message-card,
+        .cutie-card,
+        .ira-quote {
+            background-color: #fff;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
+
+        .cutie-card {
+            background-color: #fff;
+            min-width: 150px;
+            text-align: center;
+        }
+
+        .btn {
+            padding: 10px 25px;
+            background-color: #1E71FF;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #155cc2;
+        }
+
+        /* Accordion */
+        .accordion-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordion-title {
+            padding: 15px 20px;
+            background-color: #1E71FF;
+            color: #fff;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .accordion-content {
+            padding: 15px 20px;
+            display: none;
+            font-size: 16px;
+            color: #333;
+            background-color: #f8f9ff;
+        }
+
+        .accordion-item.active .accordion-content {
+            display: block;
+        }
+
+        .accordion-item.active .accordion-title {
+            background-color: #1452b7;
+        }
+
+        @media(max-width: 600px) {
+            .photo-card {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 4 / 5;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">Buddy's Special Page 💙</div>
+
+    <section id="photos" class="bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Memories with Shilpa 📸</h2>
+            <p class="text-center">Here's a lovely photo collection that reminds you of sweet moments!</p>
+            <div class="photo-gallery">
+                <img src="./assets/images/shilpa-3.webp" alt="Photo 1" class="photo-card">
+                <img src="./assets/images/saree-1.webp" alt="Photo 2" class="photo-card">
+                <img src="./assets/images/shilpa-5.webp" alt="Photo 3" class="photo-card">
+            </div>
+        </div>
+    </section>
+
+    <section id="cute-messages" class="bg-pink">
+        <div class="container">
+            <h2 class="section-title text-center">Cute Messages 💌</h2>
+            <p class="text-center">Read some heart-melting words that’ll make Shilpa smile 😊</p>
+            <div class="message-cards">
+                <div class="message-card">"Shilpa, you light up every chat like a fairy light!"</div>
+                <div class="message-card">"You're not just smart — you're Shilpaliciously brilliant!"</div>
+                <div class="message-card">"Tu ho toh sab kuch hai. Bas Buddy hi kaafi hai 🥺✨"</div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="iras-era" class="bg-purple text-white">
+        <div class="container">
+            <h2 class="section-title text-center">Buddy's Era 🌸</h2>
+            <p class="text-center">A special space for Shilpa's vibes — a mix of emotions, memories & sparkles.</p>
+            
+            <div class="buddy-content">
+                <p>From laughter to deep convos — this is the world Shilpa made beautiful ✨</p>
+                <blockquote class="buddy-quote">"In Shilpa’s world, the stars feel closer and the sky more magical."</blockquote>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="cutie-area" class="bg-yellow-light">
+        <div class="container">
+            <h2 class="section-title text-center">Cutie Area 🧸</h2>
+            <p class="text-center">Only cuteness allowed here! For smiles, hugs, and virtual cuddles 💕</p>
+            <div class="cutie-items">
+                <div class="cutie-card">🌈 Rainbow Hug</div>
+                <div class="cutie-card">🐻 Teddy Talk</div>
+                <div class="cutie-card">🍭 Lollipop Laugh</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="anu-accordion" class="bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Why We Love Shilpa 💙</h2>
+            <div class="accordion-container">
+                <div class="accordion-item active">
+                    <div class="accordion-title">🌟 Why Shilpa is the Cutest?</div>
+                    <div class="accordion-content">
+                        Shilpa is the definition of cuteness — her smile, her style, and the way she cares melt hearts! 😍✨
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-title">👑 What makes Shilpa a Queen?</div>
+                    <div class="accordion-content">
+                        Her confidence, her charm, and the way she handles everything gracefully. No one matches her
+                        vibe! 💫
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-title">💙 Buddy's Impact on Us</div>
+                    <div class="accordion-content">
+                        She's not just a friend; she's an emotion. With her around, everything feels better and
+                        brighter. ��
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reach-anu" class="bg-sky text-center">
+        <div class="container">
+            <h2 class="section-title">Reach Near Buddy 📱</h2>
+            <p>Click the button below to send Buddy your love and a virtual hug 💖</p>
+            <button style="margin-top: 10px;" class="btn mt-3" onclick="showAnuPhoto()">Message Shilpa Now 💌</button>
+            <div id="anu-photo" style="display:none; margin-top: 20px;">
+                <img src="./assets/images/shilpa-4.webp" alt="Anu"
+                    style="max-width: 300px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <p style="margin-top: 10px; font-size: 18px; font-weight: 500;">Here's your queen! 👑💙</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const items = document.querySelectorAll('.accordion-item');
+        items.forEach(item => {
+            item.querySelector('.accordion-title').addEventListener('click', () => {
+                items.forEach(i => i.classList.remove('active'));
+                item.classList.toggle('active');
+            });
+        });
+
+        function showAnuPhoto() {
+            const photo = document.getElementById('anu-photo');
+            photo.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
